@@ -13,7 +13,7 @@ jobs:
       - name: Cache npm modules
         uses: actions/cache@v3
         with:
-          path: ~/.nmp
+          path: ~/.npm
           key: node-modules-${{hashFiles('**/package-lock.json')}}
       - name: Install dependencies
         run: npm ci
@@ -30,7 +30,7 @@ jobs:
       - name: Cache npm modules
         uses: actions/cache@v3
         with:
-          path: ~/.nmp
+          path: ~/.npm
           key: node-modules-${{hashFiles('**/package-lock.json')}}
       - name: Install dependencies
         run: npm ci
